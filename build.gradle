@@ -24,18 +24,13 @@ repositories {
     maven { url "https://repo.grails.org/grails/core" }
 }
 
-grails {
-  plugins {
-    implementation('srcdep:srcdep-plugin') {
+dependencies {
+    compile implementation('srcdep:srcdep-plugin') {
         version {
             branch = 'master'
         }
     }
-  }
-}
 
-
-dependencies {
 
     compile "org.springframework.boot:spring-boot-starter-logging"
     compile "org.springframework.boot:spring-boot-autoconfigure"
